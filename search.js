@@ -15,9 +15,14 @@ const dogImgContainer = document.getElementById('js-info__image');  //конте
 const dogImg = document.createElement('img');  //фото породы  и класс
 dogImg.className = 'image-dog';
 
+const spinner = document.getElementById('js-spinner-id');
+
 searchBreedBtn.addEventListener('click', (event) => {
+    
+    spinner.classList.remove('js-spinner');  //показываю спиннер загрузки
 superagent
     .get('https://api.thedogapi.com/v1/breeds')
+
     .then((res) => {
         //сравнение введеной породы и даты с дог апи
 
@@ -41,6 +46,9 @@ superagent
             dogImg.src = res.body[0].url;  //сохраняю ссылку в тег картинки и добавляю в контейнер
 
             dogImgContainer.append(dogImg);
+
+            spinner.classList.add('js-spinner');  //убираю спиннер 
+            
             infoText.classList.remove("dogs__about"); //убираю класс скрытия
         })
     })

@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOG BREEDS INFO</title>
+    <title>DOG BREEDS INFO</title>  
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="spinner.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
 </head>
 
@@ -17,8 +18,8 @@
             <div class="main-breeds__header">
                 <h1 class="header">YOUR DOG`s BREED SEARCH</h1>
             </div>
+            <h5>CHOOSE BREED</h5>
             <div class="main-breeds__list" id='dog__list'>
-                <h5>CHOOSE BREED</h5>
                 <!-- elements from server -->
 
                 <!-- <div class="list__container" >
@@ -36,11 +37,15 @@
             </div>
         </div>
 
+        <div class="loader js-spinner" id="js-spinner-id" >Loading...</div>
+
         <div class="dogs__about content" id="js-display-none">
             <h3 class="search__title">THIS IS WHAT YOU LOOKED FOR:</h3>
             <div class="dogs__info">
-                <h5 class="info__name" id="js-info__name" ></h5>
-                <div class="info__image" id="js-info__image"></div>
+               
+                <div class="info__image" id="js-info__image">
+                    <h5 class="info__name" id="js-info__name" ></h5>
+                </div>
                 <div class="info__text" id="js-info__text">
 
                 </div>
