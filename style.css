@@ -8,7 +8,12 @@
 
 }
 
-input,
+input {
+    font: inherit;
+    outline: none;
+    border: 2px solid grey;
+}
+
 button,
 textarea,
 select {
@@ -32,73 +37,49 @@ img:hover {
 
 h3,
 h5 {
-    margin-bottom: 15px;
+    text-align: center;
+}
+
+li {
+    cursor: pointer;
+    width: 100%;
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 2% 0;
 }
 
 .container {
-    height: 100%;
+    width: 100%;
     line-height: 1.5;
     font-family: 'Montserrat', sans-serif;
-    padding: 2% 10%;   
-    background-color: #FFECD4;
+    display: flex;
+    margin-bottom: 2%;
 }
 
-.content {
-    max-width: 1200px;
-    padding: 2% 5%;
-    margin-bottom: 5px;
+.dogs {
+    flex-basis: 30%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.header {
-    margin-bottom: 30px;
-}
-
-.main-breeds__list {
-    width: 100%;
-    padding: 10px;   
-    height: 40vh;
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
-
-.list__container {
-    width: 100%;
-    display: flex;
-    flex-basis: 100%;
-    flex-wrap: wrap;
-}
-
-.list-item {
-    padding-left: 10px;
-    width: 100%;
-    overflow: hidden;
-    text-align: center;
-    border-bottom: 1px solid #998442;
-}
-
-.search__form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
 .form-input {
-    width: 70%;
-    padding: 5px 0;  
+    width: 100%;
+    padding: 5px 0;
     margin-bottom: 15px;
     text-align: center;
     border-radius: 20px;
 }
 
 .form-btn {
-    width: 25%;
+    width: 100%;
+
     padding: 5px 0;
+    margin: 15px 0;
     background-color: #95CCC0;
     cursor: pointer;
     letter-spacing: .1cm;
@@ -107,48 +88,30 @@ h5 {
 }
 
 .form-btn:hover {
-    width: 26%;
     background-color: #63ae9f;
 }
 
-.dogs__about {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;   
+.result-btn {
+    background-color: #d8bc1b;
 }
 
-.dogs__info {
-    width: 700px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
+.result-btn:hover {
+    background-color: #ffe23e;
 }
 
-.info__name {
-    text-align: center;
-    text-transform: uppercase;
-    border-bottom: 2px solid #998442;
+.slider-wrapper {
+    width: 33%;
 }
 
-.info__image {
-    display: block;
-    width: 500px;
+.result-list {
+    width: 100%;
+
 }
 
-.image-dog{
-    display: block;
-    width: 100%; 
+.js-spinner {
+    display: none;
 }
 
-.info__text {
-    text-align: center; 
-}
-
-.js-spinner{
-    display: none; 
-}
-.js-display-none{
+.js-display-none {
     display: none;
 }
