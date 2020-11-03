@@ -43,7 +43,10 @@ h5 {
 li {
     cursor: pointer;
     width: 100%;
+    text-align: center;
 }
+li:hover{
+background-color: rgb(158, 156, 156);}
 
 
 .wrapper {
