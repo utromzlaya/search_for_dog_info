@@ -5,10 +5,9 @@ const userBreedInput = document.getElementById('js-input-search');
 const spinner = document.getElementById('js-spinner-id');
 const favContainer = document.getElementById('fav-container');
 const resultList = document.getElementById('result-list');
-const clearBtn = document.getElementById('clear-btn');
 
 function saveRequestQueryPromise(name) {
-return getBreedByStringPromise(name)
+    return getBreedByStringPromise(name)
         .then(res => {
             localStorage.setItem(res.breed.id, JSON.stringify(res));
             return res;
@@ -19,11 +18,8 @@ function getSavedItem(idEl) {
     return JSON.parse(localStorage.getItem(idEl));
 }
 
-function deleteFromStorage() {
-    Object.keys(localStorage).forEach(el=>localStorage.removeItem(el));
 
-}
-function deleteItemFromStorage(id){
+function deleteItemFromStorage(id) {
     localStorage.removeItem(id);
 }
 
@@ -96,7 +92,7 @@ function createCardFromBreed(breed) {
 
     cardTitle.innerText = breed.breed.name;
     cardInfoText.innerText = `Weight: ${breed.breed.weight.metric} kg \n Height: ${breed.breed.height.metric} cm \n ${breed.breed.temperament} \n Life span: ${breed.breed.life_span}`;
-    
+
     cardBody.append(cardTitle, cardInfoText);
     card.append(cardBody);
 
@@ -106,13 +102,13 @@ function createCardFromBreed(breed) {
 function addBreedToFav(event) {
     if (!event.target.matches('button')) return
     saveRequestQueryPromise(event.target.textContent)
-        .then(obj => {            
+        .then(obj => {
             cardsContainer.appendChild(createCardFromBreed(obj));
             favContainer.prepend(addbreedToFavList(obj));
             $('.dogs__about').slick("refresh");
         })
-        
-    }
+
+}
 
 function deleteFromFav(event) {
     if (!event.target.matches('li')) return
@@ -160,5 +156,8 @@ $(document).ready(() => {
     });
     resultList.addEventListener('click', addBreedToFav);
     favContainer.addEventListener('click', deleteFromFav);
-    clearBtn.addEventListener('click', deleteFromStorage);
 });
+//for clearing all storage
+// function deleteFromStorage() {
+//     Object.keys(localStorage).forEach(el=>localStorage.removeItem(el));
+// }
