@@ -1,66 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOG BREEDS INFO</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="spinner.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="spinner.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="wrapper">
-        <div class="container">
-            <!-- <h1 class="header">YOUR DOG`s BREED SEARCH</h1> -->
+      <div class="container">
+        <!-- <h1 class="header">YOUR DOG`s BREED SEARCH</h1> -->
 
-            <div class="dogs">
-                <h3 class="search__title">YOU LOOK FOR...</h3>
+        <div class="dogs">
+          <h3 class="search__title">YOU LOOK FOR...</h3>
 
-                <input class="form-input" id="js-input-search" type="text"
-                    placeholder="Type...">
-                <button class="form-btn" id="js-btn-search">SEARCH</button>
-                <h3 class="search__title">YOUR RESULTS: </h3>
+          <input
+            class="form-input"
+            id="js-input-search"
+            type="text"
+            placeholder="Type..."
+          />
+          <button class="form-btn" id="js-btn-search">SEARCH</button>
+          <h3 class="search__title">YOUR RESULTS:</h3>
 
-                <div class="result-list" id="result-list"></div>
+          <div class="result-list" id="result-list"></div>
 
-                <div class="loader js-spinner" id="js-spinner-id">Loading...</div>
-
-            </div>
-            <div class="slider-wrapper">
-                <h3 class="search__title">YOUR BREED: </h3>
-
-                <div class="dogs__about" id="cards-container"></div>
-            </div>
-
-            <div class="dogs">
-                <h3 class="search__title">YOUR FAVs</h3>
-                <ul class="list-group list-group-flush" id="fav-container">
-                </ul>
-            </div>
+          <div class="loader js-spinner" id="js-spinner-id">Loading...</div>
         </div>
-        <div class="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d164140.71391029478!2d36.278262246582926!3d49.99825894091507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1604306821139!5m2!1sru!2sua"
-                width="1000" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-                tabindex="0"></iframe>
+        <div class="slider-wrapper">
+          <h3 class="search__title">YOUR BREED:</h3>
+
+          <div class="dogs__about" id="cards-container"></div>
         </div>
+
+        <div class="dogs">
+          <h3 class="search__title">YOUR FAVs</h3>
+          <ul class="list-group list-group-flush" id="fav-container"></ul>
+        </div>
+      </div>
     </div>
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/superagent/4.1.0/superagent.min.js"
-        integrity="sha512-LJaxxgpiq7SihGQ21nejROsll6FRrgbs0Wxtgqb5x+Q0CJICA3vt8hlBxSD8NLsO+Yabgg3B7ARexiijKiojGg=="
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/superagent/4.1.0/superagent.min.js"
+      integrity="sha512-LJaxxgpiq7SihGQ21nejROsll6FRrgbs0Wxtgqb5x+Q0CJICA3vt8hlBxSD8NLsO+Yabgg3B7ARexiijKiojGg=="
+      crossorigin="anonymous"
+    ></script>
     <script src="autocomplete.js"></script>
     <script src="script.js"></script>
-
-</body>
-
+  </body>
 </html>
